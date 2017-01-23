@@ -26,7 +26,16 @@ $(document).ready(function() {
 
 
     $(".entries").show();
-    $("ul#entries").append(newPlace.createEntry());
+    $("ul#entries").append(inputtedName);
+    $("ul#entries").last().click(function(){//may be broken
+      $("#details").show()
+    });
+
+    $("#details h2").text(inputtedName);
+    $(".location").text(inputtedLocation);
+    $(".landmarks").text(inputtedLandmarks);
+    $(".dates").text(inputtedDates);
+    $(".description").text(inputtedDescription);
 
     $(".input").val("");
   })

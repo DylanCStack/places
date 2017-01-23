@@ -10,32 +10,44 @@
   <body>
     <div class="container">
       <h1>Places You've Visited</h1>
+      <div class="row">
+        <div class="col-md-8">
+          <form id="places">
+            <div class="form-group">
+              <label for="name">Name of Place</label>
+              <input type="text" name="name" id="name"class="input">
+            </div>
+            <div class="form-group">
+              <label for="location">Location of Place</label>
+              <input type="text" name="location" id="location"class="input">
+            </div>
+            <div class="form-group">
+              <label for="landmarks">Landmarks of Place (separate with commas and spaces)</label>
+              <input type="text" name="landmarks" id="landmarks"class="input">
+            </div>
+            <div class="form-group">
+              <label for="dates">Ideal Dates of Visit</label>
+              <input type="text" name="dates" id="dates"class="input">
+            </div>
+            <div class="form-group">
+              <label for="description">Description of Place</label>
+              <textarea rows="4" cols="70" name="description" id="description"class="input">
+              </textarea>
+            </div>
 
-      <form id="places">
-        <div class="form-group">
-          <label for="name">Name of Place</label>
-          <input type="text" name="name" id="name"class="input">
+            <button type="submit" class="btn">Submit</button>
+          </form>
         </div>
-        <div class="form-group">
-          <label for="location">Location of Place</label>
-          <input type="text" name="location" id="location"class="input">
+        <div class="col-md-4">
+          <div id="details">
+            <h2></h2>
+            <p>Location: <span class="location"></span></p>
+            <p>Landmarks: <span class="landmarks"></span></p>
+            <p>Ideal Dates: <span class="dates"></span></p>
+            <p>Description: <span class="description"></span></p>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="landmarks">Landmarks of Place (separate with commas and spaces)</label>
-          <input type="text" name="landmarks" id="landmarks"class="input">
-        </div>
-        <div class="form-group">
-          <label for="dates">Ideal Dates of Visit</label>
-          <input type="text" name="dates" id="dates"class="input">
-        </div>
-        <div class="form-group">
-          <label for="description">Description of Place</label>
-          <textarea rows="4" cols="70" name="description" id="description"class="input">
-          </textarea>
-        </div>
-
-        <button type="submit" class="btn">Submit</button>
-      </form>
+      </div>
 
       <h2 class="entries">Recent Entries:</h2>
       <ul id="entries">
