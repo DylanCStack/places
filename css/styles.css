@@ -2,7 +2,7 @@
   display:none;
 }
 
-#entries:hover {
+#entries li:hover {
   color:#08c;
   text-decoration: underline;
   cursor:pointer;

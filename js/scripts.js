@@ -26,17 +26,15 @@ $(document).ready(function() {
 
 
     $(".entries").show();
-    $("ul#entries").append(inputtedName);
-    $("ul#entries").last().click(function(){//may be broken
-      $("#details").show()
+    $("ul#entries").append("<li><span class='publish'>" + newPlace.name + "</span></li>");
+    $(".publish").last().click(function(){//may be broken
+      $("#details").show();
+      $("#detail-list h2").text( newPlace.name );
+      $("#detail-list .location").text(newPlace.location );
+      $("#detail-list .landmarks").text(newPlace.landmarks );
+      $("#detail-list .dates").text(newPlace.dates );
+      $("#detail-list .description").text(newPlace.description );
     });
-
-    $("#details h2").text(inputtedName);
-    $(".location").text(inputtedLocation);
-    $(".landmarks").text(inputtedLandmarks);
-    $(".dates").text(inputtedDates);
-    $(".description").text(inputtedDescription);
-
     $(".input").val("");
   })
 })
